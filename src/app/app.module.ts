@@ -7,8 +7,8 @@ import { MatCardModule } from '@angular/material/card';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { FlexLayoutModule } from '@angular/flex-layout';
 // Local import from projects/purchase-order-lib. 
-import { PurchaseOrderLibModule } from 'PurchaseOrderLib';
-// import { PurchaseOrderLibModule } from 'purchase-order-lib';
+// import { PurchaseOrderLibModule } from 'PurchaseOrderLib';
+import { PurchaseOrderLibModule } from 'purchase-order-lib';
 
 
 @NgModule({
