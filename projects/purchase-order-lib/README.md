@@ -2,23 +2,42 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
-## Code scaffolding
+install
+=======
 
-Run `ng generate component component-name --project purchase-order-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project purchase-order-lib`.
-> Note: Don't forget to add `--project purchase-order-lib` or else it will be added to the default project in your `angular.json` file. 
+With [npm](http://npmjs.org) do:
 
-## Build
+```
+npm install purchase-order-lib
+```
 
-Run `ng build purchase-order-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+example
+=======
+After install
+Use the template file As：
+``` html
+  <PurchaseOrderLib [configData]=configData></PurchaseOrderLib>
 
-After building your library with `ng build purchase-order-lib`, go to the dist folder `cd dist/purchase-order-lib` and run `npm publish`.
+```
 
-## Running unit tests
+***
+Provide a configuration file with URL and interface parameters
+```ts
+ export default {
+    url: "https://localhost:44306/PurchaseOrder/GetOrders",
+    option: {
+        queryType: 2,
+        pageNumber: 1,
+        pageSize: 10,
+        poNumber: "",
+        supplierStr: "",
+        truckCenterId: 564,
+        dateRange: 3
+    }
+}
+```
+notes
+=====
 
-Run `ng test purchase-order-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This module was written while sitting high above the ground in a tree.

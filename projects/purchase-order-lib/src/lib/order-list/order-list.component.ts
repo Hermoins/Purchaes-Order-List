@@ -9,6 +9,5 @@ import { Input } from '@angular/core';
 
 export class OrderListComponent  {
   @Input() purchaseorder: any = {};
-  @Input() truckCenter: any = {};
  
 }

@@ -20,7 +20,7 @@
         <mat-card-subtitle fxLayout="row" fxLayoutAlign="space-between center" style="width: 100%;">
             <div fxLayout="row" fxLayoutAlign="space-between center">
                 <div style="font-size:14px;color:#A7A8A9;">
-                    {{purchaseorder.cost | currency:truckCenter.currency : 'symbol-narrow'}}
+                    {{purchaseorder.cost | currency:'EUR' : 'symbol-narrow'}}
                 </div>
                 <div style="padding-left:3px;font-size:14px;color:#A7A8A9;white-space: nowrap;">
                     - {{purchaseorder.items}} {{purchaseorder.items > 1 ? 'ITEMS': 'ITEM'}}

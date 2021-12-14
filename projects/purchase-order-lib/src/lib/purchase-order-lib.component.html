@@ -1,9 +1,10 @@
 <div class="cdk-virtual-scroll-data-source-example">
+  <div class="lds-dual-ring" *ngIf="loadingFlag" [@fadeAnimation] ></div>
     <cdk-virtual-scroll-viewport orientation="vertical" itemSize="110" minBufferPx="160" maxBufferPx="400"
       class="viewport">
       <ul>
         <li *ngFor="let purchaseorder of purchaseItemsObservable;">
-          <order-list [purchaseorder]="purchaseorder"  [truckCenter]="truckCenter"></order-list>
+          <order-list [purchaseorder]="purchaseorder"></order-list>
         </li>
       </ul>
     </cdk-virtual-scroll-viewport>
