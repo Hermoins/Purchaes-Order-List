@@ -2,7 +2,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { PurchaseOrderLibService } from './purchase-order-lib.service';
-
+import  polist  from './poList'
+// C:\Users\A403151\source\repos\Purchase-Order-Poc\src\poList.ts
 
 @Component({
   selector: 'PurchaseOrderLib',
@@ -34,10 +35,15 @@ export class PurchaseOrderLibComponent implements OnInit {
     const url = this.configData.url;
     const option = this.configData.option
     this.loadingFlag = true
-    this.purchaseOrderLibService.getPurchaseOrder(url, option).subscribe(res => {
-      this.purchaseItemsObservable = res.data
+    if(url) {
+      this.purchaseOrderLibService.getPurchaseOrder(url, option).subscribe(res => {
+        this.purchaseItemsObservable = res.data
+        this.loadingFlag = false
+      })
+    } else {
+      this.purchaseItemsObservable = polist
       this.loadingFlag = false
-    })
+    }
   }
 
 }
