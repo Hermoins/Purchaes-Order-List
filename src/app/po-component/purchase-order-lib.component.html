@@ -4,7 +4,7 @@
       class="viewport">
       <ul>
         <li *ngFor="let purchaseorder of purchaseItemsObservable;">
-          <order-list [purchaseorder]="purchaseorder"></order-list>
+          <order-list [purchaseorder]="purchaseorder" (poChange)="poChange($event)"></order-list>
         </li>
       </ul>
     </cdk-virtual-scroll-viewport>

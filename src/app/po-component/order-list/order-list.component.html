@@ -29,7 +29,8 @@
             <mat-card-actions>
                 <div class="mat-focus-indicator mat-button mat-button-base"
                     style="font-size:14px; color: #50A294;-webkit-text-fill-color:#50A294;height: 36px;line-height: 36px;margin-right: 10px;"
-                    routerLinkActive="active">{{purchaseorder.statusID =='2' ? 'RECEIVE' : 'REVERT'}}
+                    routerLinkActive="active" (click)="click(purchaseorder)">{{purchaseorder.statusID =='2' ? 'RECEIVE'
+                    : 'REVERT'}}
                 </div>
             </mat-card-actions>
         </mat-card-subtitle>

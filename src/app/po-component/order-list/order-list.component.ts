@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Input } from '@angular/core';
 
 @Component({
@@ -8,6 +8,10 @@ import { Input } from '@angular/core';
 })
 
 export class OrderListComponent  {
-  @Input() purchaseorder: any = {};
- 
+  @Input() public purchaseorder: any = {};
+  @Output() public poChange = new EventEmitter();
+  click(event:any) {
+    console.log("event  emit")
+    this.poChange.emit(event)
+  }
 }
