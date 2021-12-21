@@ -7,13 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style href="./dist/Purchase-Order-Poc/styles.css"></style>
+    <style>
+        .imgBox {
+            background-image: url('./dist/Purchase-Order-Poc/file_title.svg') !important;
+        }
+    </style>
     <script src="./dist/Purchase-Order-Poc/main.js"></script>
     <script src="./dist/Purchase-Order-Poc/polyfills.js"></script>
     <script src="./dist/Purchase-Order-Poc/runtime.js"></script>
 </head>
 
 <body>
-    <po-list id="po" ></po-list>
+    <po-list id="po"></po-list>
     <script defer>
         const poList = document.getElementById('po');
         poList.configData = {
@@ -29,8 +34,6 @@
             }
         }
         poList.addEventListener('poClick', e => { console.log(e) })
-   
-       
     </script>
 </body>
 
